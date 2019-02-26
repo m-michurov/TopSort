@@ -3,4 +3,4 @@ project(TopSort C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(TopSort main.c definitions.h)
+add_executable(TopSort main.c definitions.h topsort.c topsort.h)

@@ -3,4 +3,9 @@
 
 CMakeFiles/TopSort.dir/main.c.obj: ../definitions.h
 CMakeFiles/TopSort.dir/main.c.obj: ../main.c
+CMakeFiles/TopSort.dir/main.c.obj: ../topsort.h
+
+CMakeFiles/TopSort.dir/topsort.c.obj: ../definitions.h
+CMakeFiles/TopSort.dir/topsort.c.obj: ../topsort.c
+CMakeFiles/TopSort.dir/topsort.c.obj: ../topsort.h
 

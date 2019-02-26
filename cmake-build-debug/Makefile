@@ -149,6 +149,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/main.c.s
 .PHONY : main.c.s
 
+topsort.obj: topsort.c.obj
+
+.PHONY : topsort.obj
+
+# target to build an object file
+topsort.c.obj:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/topsort.c.obj
+.PHONY : topsort.c.obj
+
+topsort.i: topsort.c.i
+
+.PHONY : topsort.i
+
+# target to preprocess a source file
+topsort.c.i:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/topsort.c.i
+.PHONY : topsort.c.i
+
+topsort.s: topsort.c.s
+
+.PHONY : topsort.s
+
+# target to generate assembly for a file
+topsort.c.s:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/topsort.c.s
+.PHONY : topsort.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... topsort.obj
+	@echo ... topsort.i
+	@echo ... topsort.s
 .PHONY : help
 
 

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "E:/CLionProjects/TopSort/main.c" "E:/CLionProjects/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/main.c.obj"
+  "E:/CLionProjects/TopSort/topsort.c" "E:/CLionProjects/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/topsort.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

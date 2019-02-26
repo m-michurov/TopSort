@@ -80,6 +80,12 @@
 		<Unit filename="E:/CLionProjects/TopSort/main.c">
 			<Option target="TopSort"/>
 		</Unit>
+		<Unit filename="E:/CLionProjects/TopSort/topsort.c">
+			<Option target="TopSort"/>
+		</Unit>
+		<Unit filename="E:/CLionProjects/TopSort/topsort.h">
+			<Option target="TopSort"/>
+		</Unit>
 		<Unit filename="E:/CLionProjects/TopSort/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

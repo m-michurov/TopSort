@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TopSort.dir/main.c.obj"
+  "CMakeFiles/TopSort.dir/topsort.c.obj"
   "TopSort.pdb"
   "TopSort.exe"
   "TopSort.exe.manifest"
