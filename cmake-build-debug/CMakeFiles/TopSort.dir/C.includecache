@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/CLionProjects/TopSort/definitions.h
+stdio.h
+-
+
+E:/CLionProjects/TopSort/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+definitions.h
+E:/CLionProjects/TopSort/definitions.h
+
