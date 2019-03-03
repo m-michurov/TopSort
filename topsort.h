@@ -8,6 +8,7 @@
 #include <stdio.h>
 
 #include "definitions.h"
+#include "thecoolermalloc.h"
 
 typedef enum {
     WHITE,
@@ -44,5 +45,11 @@ void addVertex(
 void topSort(
         GRAPH * graph,
         STACK * stack);
+
+void freeStack(
+        STACK * stack);
+
+void freeGraph(
+        GRAPH * graph);
 
 #endif

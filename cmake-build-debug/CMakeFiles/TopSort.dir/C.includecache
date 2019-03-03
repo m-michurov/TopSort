@@ -13,10 +13,26 @@ stdio.h
 E:/CLionProjects/TopSort/main.c
 stdio.h
 -
+thecoolermalloc.h
+E:/CLionProjects/TopSort/thecoolermalloc.h
 definitions.h
 E:/CLionProjects/TopSort/definitions.h
 topsort.h
 E:/CLionProjects/TopSort/topsort.h
+
+E:/CLionProjects/TopSort/thecoolermalloc.c
+thecoolermalloc.h
+E:/CLionProjects/TopSort/thecoolermalloc.h
+
+E:/CLionProjects/TopSort/thecoolermalloc.h
+stdlib.h
+-
+limits.h
+-
+stdio.h
+-
+memory.h
+-
 
 E:/CLionProjects/TopSort/topsort.c
 topsort.h
@@ -31,4 +47,6 @@ stdio.h
 -
 definitions.h
 E:/CLionProjects/TopSort/definitions.h
+thecoolermalloc.h
+E:/CLionProjects/TopSort/thecoolermalloc.h
 

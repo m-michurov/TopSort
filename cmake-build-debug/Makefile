@@ -149,6 +149,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/main.c.s
 .PHONY : main.c.s
 
+thecoolermalloc.obj: thecoolermalloc.c.obj
+
+.PHONY : thecoolermalloc.obj
+
+# target to build an object file
+thecoolermalloc.c.obj:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/thecoolermalloc.c.obj
+.PHONY : thecoolermalloc.c.obj
+
+thecoolermalloc.i: thecoolermalloc.c.i
+
+.PHONY : thecoolermalloc.i
+
+# target to preprocess a source file
+thecoolermalloc.c.i:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/thecoolermalloc.c.i
+.PHONY : thecoolermalloc.c.i
+
+thecoolermalloc.s: thecoolermalloc.c.s
+
+.PHONY : thecoolermalloc.s
+
+# target to generate assembly for a file
+thecoolermalloc.c.s:
+	$(MAKE) -f CMakeFiles\TopSort.dir\build.make CMakeFiles/TopSort.dir/thecoolermalloc.c.s
+.PHONY : thecoolermalloc.c.s
+
 topsort.obj: topsort.c.obj
 
 .PHONY : topsort.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... thecoolermalloc.obj
+	@echo ... thecoolermalloc.i
+	@echo ... thecoolermalloc.s
 	@echo ... topsort.obj
 	@echo ... topsort.i
 	@echo ... topsort.s

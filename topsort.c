@@ -3,15 +3,9 @@
 inline STACK * initStack(
         size_t size)
 {
-    STACK * stack = malloc(sizeof(STACK));
+    STACK * stack = (STACK *) allocate(sizeof(STACK));
 
-    if (stack == NULL) MEM_ERROR;
-
-    stack->stack = malloc(sizeof(size_t) * size);
-
-    if (stack->stack == NULL) MEM_ERROR;
-
-    stack->stack_pos = 0;
+    stack->stack = (size_t *) allocate(sizeof(size_t) * size);
 
     return stack;
 }
@@ -19,24 +13,16 @@ inline STACK * initStack(
 GRAPH * initGraph(
         size_t size)
 {
-    GRAPH * new_graph = (GRAPH *)malloc(sizeof(GRAPH));
+    GRAPH * new_graph = (GRAPH *) allocate(sizeof(GRAPH));
 
-    if (new_graph == NULL) MEM_ERROR;
-
-    new_graph->adjacency_list = (short **)malloc((size + 1) * sizeof(short *));
-    new_graph->colours = (COLOUR *)malloc((size + 1) * sizeof(COLOUR));
+    new_graph->adjacency_list = (short **) allocate((size + 1) * sizeof(short *));
+    new_graph->colours = (COLOUR *) allocate((size + 1) * sizeof(COLOUR));
     new_graph->size = size;
-
-    if (new_graph->adjacency_list == NULL) MEM_ERROR;
 
     size += 1;
 
     for (size_t k = 1; k < size; k++) {
-        new_graph->adjacency_list[k] = malloc(sizeof(short));
-
-        if (new_graph->adjacency_list[k] == NULL) MEM_ERROR;
-
-        new_graph->adjacency_list[k][0] = 0;
+        new_graph->adjacency_list[k] = (short *) allocate(sizeof(short));
 
         new_graph->colours[k] = WHITE;
     }
@@ -56,7 +42,7 @@ void addVertex(
 
     for (pos = 0; graph->adjacency_list[src][pos] > 0 && graph->adjacency_list[src][pos] != dst; pos++);
 
-    graph->adjacency_list[src] = realloc(graph->adjacency_list[src], (pos + 2) * sizeof(short));
+    graph->adjacency_list[src] = (short *) reallocate(graph->adjacency_list[src], (pos + 2) * sizeof(short));
 
     graph->adjacency_list[src][pos++] = dst;
     graph->adjacency_list[src][pos] = 0;
@@ -89,4 +75,29 @@ inline void topSort(
 {
     for (size_t k = 1; k < graph->size + 1; k++)
         dfs(k, graph, stack);
+}
+
+void freeStack(
+        STACK * stack)
+{
+    if (stack == NULL)
+        return;
+
+    free(stack->stack);
+    free(stack);
+}
+
+void freeGraph(
+        GRAPH * graph)
+{
+    if (graph == NULL)
+        return;
+
+    free(graph->colours);
+
+    for (size_t k = 0; k < graph->size; k++)
+        free(graph->adjacency_list[k]);
+
+    free(graph->adjacency_list);
+    free(graph);
 }

@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+#include "thecoolermalloc.h"
 #include "definitions.h"
 #include "topsort.h"
+
 
 int main(
         void)
@@ -34,6 +36,11 @@ int main(
 
     while (stack->stack_pos > 0)
         printf("%d ", stack->stack[--stack->stack_pos]);
+
+    //freeGraph(graph);
+    //freeStack(stack);
+
+    freeall();
 
     return 0;
 }

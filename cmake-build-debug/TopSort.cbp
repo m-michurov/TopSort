@@ -80,6 +80,12 @@
 		<Unit filename="E:/CLionProjects/TopSort/main.c">
 			<Option target="TopSort"/>
 		</Unit>
+		<Unit filename="E:/CLionProjects/TopSort/thecoolermalloc.c">
+			<Option target="TopSort"/>
+		</Unit>
+		<Unit filename="E:/CLionProjects/TopSort/thecoolermalloc.h">
+			<Option target="TopSort"/>
+		</Unit>
 		<Unit filename="E:/CLionProjects/TopSort/topsort.c">
 			<Option target="TopSort"/>
 		</Unit>
