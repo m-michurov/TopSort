@@ -76,7 +76,7 @@ inline void topSort(
     for (size_t k = 1; k < graph->size + 1; k++)
         dfs(k, graph, stack);
 }
-
+/*
 void freeStack(
         STACK * stack)
 {
@@ -101,3 +101,4 @@ void freeGraph(
     free(graph->adjacency_list);
     free(graph);
 }
+*/

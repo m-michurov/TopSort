@@ -45,11 +45,11 @@ void addVertex(
 void topSort(
         GRAPH * graph,
         STACK * stack);
-
+/*
 void freeStack(
         STACK * stack);
 
 void freeGraph(
         GRAPH * graph);
-
+*/
 #endif

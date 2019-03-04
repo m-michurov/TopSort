@@ -15,7 +15,7 @@
 #define MEM_ERROR           {puts("UNABLE TO ALLOCATE MEMORY");             exit(EXIT_SUCCESS);};
 #endif
 
-#define MAX_ALLOC_COUNT USHRT_MAX
+#define MAX_ALLOC_COUNT 65535
 
 void * allocate(
         size_t size);
