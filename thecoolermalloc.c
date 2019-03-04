@@ -16,8 +16,6 @@ void * allocate(
 
     allocated_memory[ptr_arr_pos++] = new;
 
-    //printf("ALLOCATED %u BYTES AT %u\n", size, (size_t)allocated_memory[ptr_arr_pos - 1]);
-
     return new;
 }
 
@@ -44,8 +42,6 @@ void freeall(
 {
     for (size_t idx = 0; idx < ptr_arr_pos; idx++) {
         free(allocated_memory[idx]);
-
-        //printf("FREED %u\n", (size_t)allocated_memory[idx]);
 
         allocated_memory[idx] = NULL;
     }
