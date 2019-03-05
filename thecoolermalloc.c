@@ -3,6 +3,7 @@
 static void * allocated_memory[MAX_ALLOC_COUNT] = { NULL };
 static size_t ptr_arr_pos = 0;
 
+
 void * allocate(
         size_t size)
 {
@@ -18,6 +19,7 @@ void * allocate(
 
     return new;
 }
+
 
 void * reallocate(
         void * src,
@@ -37,6 +39,7 @@ void * reallocate(
     return src;
 }
 
+
 void freeall(
         void)
 {
@@ -44,5 +47,22 @@ void freeall(
         free(allocated_memory[idx]);
 
         allocated_memory[idx] = NULL;
+    }
+}
+
+
+void freeone(
+        void * dst)
+{
+    if (dst == NULL)
+        return;
+
+    size_t idx = 0;
+    for (idx = 0; idx < ptr_arr_pos && dst != allocated_memory[idx]; idx++ );
+
+    if (idx < ptr_arr_pos) {
+        allocated_memory[idx] = NULL;
+
+        free(dst);
     }
 }

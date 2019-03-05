@@ -1,5 +1,6 @@
 #include "topsort.h"
 
+
 inline STACK * initStack(
         size_t size)
 {
@@ -9,6 +10,7 @@ inline STACK * initStack(
 
     return stack;
 }
+
 
 GRAPH * initGraph(
         size_t size)
@@ -30,6 +32,7 @@ GRAPH * initGraph(
     return  new_graph;
 }
 
+
 void addVertex(
         GRAPH * graph,
         short src,
@@ -48,6 +51,7 @@ void addVertex(
     graph->adjacency_list[src][pos] = 0;
 }
 
+
 static void dfs(
         size_t vertex,
         GRAPH * graph,
@@ -56,7 +60,8 @@ static void dfs(
     if (graph->colours[vertex] == BLACK)
         return;
 
-    if (graph->colours[vertex] == GREY) SORT_ERROR;
+    if (graph->colours[vertex] == GREY)
+        SORT_ERROR;
 
     graph->colours[vertex] = GREY;
 
@@ -69,6 +74,7 @@ static void dfs(
     stack->stack[stack->stack_pos++] = vertex;
 }
 
+
 inline void topSort(
         GRAPH * graph,
         STACK * stack)
@@ -76,29 +82,3 @@ inline void topSort(
     for (size_t k = 1; k < graph->size + 1; k++)
         dfs(k, graph, stack);
 }
-/*
-void freeStack(
-        STACK * stack)
-{
-    if (stack == NULL)
-        return;
-
-    free(stack->stack);
-    free(stack);
-}
-
-void freeGraph(
-        GRAPH * graph)
-{
-    if (graph == NULL)
-        return;
-
-    free(graph->colours);
-
-    for (size_t k = 0; k < graph->size; k++)
-        free(graph->adjacency_list[k]);
-
-    free(graph->adjacency_list);
-    free(graph);
-}
-*/

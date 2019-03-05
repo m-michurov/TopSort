@@ -35,7 +35,7 @@ int main(
     topSort(graph, stack);
 
     while (stack->stack_pos > 0)
-        printf("%d ", stack->stack[--stack->stack_pos]);
+        printf("%d ", (int)stack->stack[--stack->stack_pos]);
 
     freeall();
 

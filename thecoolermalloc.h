@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <memory.h>
 
-#define ALLOC_COUNT_ERROR   {puts("MAXIMUM ALLOCATIONS LIMIT EXCEEDED");    exit(EXIT_SUCCESS);};
+#define ALLOC_COUNT_ERROR   do {puts("MAXIMUM ALLOCATIONS LIMIT EXCEEDED");    exit(EXIT_SUCCESS);} while(0)
 #define REALLOC_NULL_ERROR  {puts("UNABLE TO REALLOCATE NULL POINTER");     exit(EXIT_SUCCESS);};
 
 #ifndef MEM_ERROR
@@ -26,5 +26,8 @@ void * reallocate(
 
 void freeall(
         void);
+
+void freeone(
+        void * dst);
 
 #endif

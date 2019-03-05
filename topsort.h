@@ -4,11 +4,11 @@
 #define TOPSORT_TOPSORT_H
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "definitions.h"
 #include "thecoolermalloc.h"
+
 
 typedef enum {
     WHITE,
@@ -31,25 +31,23 @@ typedef struct
     int stack_pos;
 } STACK;
 
+
 STACK * initStack(
         size_t size);
 
+
 GRAPH * initGraph(
         size_t size);
+
 
 void addVertex(
         GRAPH *graph,
         short src,
         short dst);
 
+
 void topSort(
         GRAPH * graph,
         STACK * stack);
-/*
-void freeStack(
-        STACK * stack);
 
-void freeGraph(
-        GRAPH * graph);
-*/
 #endif
