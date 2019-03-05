@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/CLionProjects/TopSort/main.c" "E:/CLionProjects/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/main.c.obj"
-  "E:/CLionProjects/TopSort/thecoolermalloc.c" "E:/CLionProjects/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/thecoolermalloc.c.obj"
-  "E:/CLionProjects/TopSort/topsort.c" "E:/CLionProjects/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/topsort.c.obj"
+  "H:/NSUProgLabs/TopSort/main.c" "H:/NSUProgLabs/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/main.c.obj"
+  "H:/NSUProgLabs/TopSort/thecoolermalloc.c" "H:/NSUProgLabs/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/thecoolermalloc.c.obj"
+  "H:/NSUProgLabs/TopSort/topsort.c" "H:/NSUProgLabs/TopSort/cmake-build-debug/CMakeFiles/TopSort.dir/topsort.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
